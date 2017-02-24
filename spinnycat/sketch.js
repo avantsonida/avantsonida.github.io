@@ -2,7 +2,7 @@ var kitty;
 var kittyImg;
 
 function preload() {
-  kittyImg = loadImage('avantsonida.github.io/spinnycat/assets/cat.png');
+  kittyImg = loadImage('assets/cat.png');
 }
 
 function setup() {
