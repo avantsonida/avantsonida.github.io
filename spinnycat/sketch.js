@@ -32,11 +32,7 @@ function draw() {
 a.pitch = mouseY / windowHeight;
 b.index = a.out;
 b.cmRatio = mouseX / windowWidth;
-b.fx.add(
-  Delay({
-    time:     mouseX / windowWidth
-    feedback: mouseY / windowHeight
-  })
+b.fx.add(Delay({time:mouseX / windowWidth, feedback: mouseY / windowHeight});
 )
 
 
