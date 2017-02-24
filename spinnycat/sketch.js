@@ -17,6 +17,7 @@ function draw() {
   if (mouseIsPressed) {
     kitty.rotation += 2;
     tint(0, 153, random(200), 126);
+    //
   }
   drawSprites();
 }
