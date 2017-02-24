@@ -9,6 +9,10 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   kitty = createSprite(width/3, height/3);
   kitty.addImage(kittyImg);
+
+  a = EDrums('x*o*x*o-');
+  b = FM({ attack: ms(1) })
+    .note.seq(['c2','c2','c2','c3','c4'].random(), [1/4,1/8,1/16].random(1/16,2));
 }
 
 function draw() {
@@ -24,6 +28,18 @@ function draw() {
     tint(200, 153, x, 126);
   }
   drawSprites();
+
+a.pitch = mouseY / windowHeight;
+b.index = a.out;
+b.cmRatio = mouseX / windowWidth;
+b.fx.add(
+  Delay({
+    time:     mouseX / windowWidth;
+    feedback: mouseY / windowHeight;
+  })
+)
+
+
 }
 
 function windowResized() {
