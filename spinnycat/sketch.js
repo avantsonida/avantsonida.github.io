@@ -9,7 +9,6 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   kitty = createSprite(width/3, height/3);
   kitty.addImage(kittyImg);
-  kitty.tint(0, 153, 204);
 }
 
 function draw() {
@@ -17,6 +16,7 @@ function draw() {
   kitty.position.y = mouseY;
   if (mouseIsPressed) {
     kitty.rotation += 2;
+    tint(0, 153, random(200), 126);
   }
   drawSprites();
 }
