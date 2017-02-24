@@ -12,11 +12,16 @@ function setup() {
 }
 
 function draw() {
+  
+  var t = 0; //argument of sin
+  x = map(sin(t), -1.0, 1.0, 0, 255);
+  t += 0.05;
+
   kitty.position.x = mouseX;
   kitty.position.y = mouseY;
   if (mouseIsPressed) {
     kitty.rotation += 4;
-    tint(0, 153, random(200), 126);
+    tint(200, 153, x, 126);
   }
   drawSprites();
 }
