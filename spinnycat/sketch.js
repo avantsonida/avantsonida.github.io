@@ -6,9 +6,10 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowHeight, windowWidth);
-  kitty = createSprite(width/2, height/2);
+  createCanvas(windowWidth, windowHeight);
+  kitty = createSprite(width/3, height/3);
   kitty.addImage(kittyImg);
+  kitty.tint(0, 153, 204);
 }
 
 function draw() {
@@ -20,3 +21,6 @@ function draw() {
   drawSprites();
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
