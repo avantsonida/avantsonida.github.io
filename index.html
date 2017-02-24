@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Taurin Barrera</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/mycss.css" rel="stylesheet
+
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+	</head>
+<body>
+
+		<div class="navbar navbar-fixed-top alt">
+		  <div class="container">
+		    <div class="navbar-header">
+		      <a href="#" class="navbar-brand">Taurindb</a>
+		      <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		      </a>
+		    </div>
+				<div class="collapse navbar-collapse" id="navigationMenu">
+		            <ul class="nav navbar-nav navbar-right">
+										<li><a href="#About">About</a></li>
+		                <li><a href="#Contact">Contact</a></li>
+		                <li class="dropdown">
+		                    <a href="#" data-toggle="dropdown">Social<b class="caret"></b></a>
+		                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+		                        <li><a href="https://www.twitter.com/myspacebooktube">Twitter</a></li>
+		                        <li><a href="https://www.facebook.com/taurindb">Facebook</a></li>
+		                        <li><a href="http://in.linkedin.com/in/taurin">Linkedin</a></li>
+		                        <li><a href="http://instagram.com/myspacebooktube">Instagram</a></li>
+		                    </ul>
+		                </li>
+		            </ul>
+		        </div>
+		   </div>
+		</div>
+
+		<div class="header alt vert">
+		  <div class="container" id="headname">
+		    <h1>TAURIN DANIEL BARRERA</h1>
+					<h3>
+		          <span class="glyphicon glyphicon-cutlery"></span> Delicious
+		          <span class="glyphicon glyphicon-headphones"></span> Audio
+		          <span class="glyphicon glyphicon-eye-open"></span> Visual
+		          <span class="glyphicon glyphicon-cloud"></span> Code
+					</h3>
+				</div>
+		</div>
+
+		<div class="blurb" id="Experiments">
+		  <div class="container-fluid">
+		    <div class="row">
+							<div class="col-md-5 pull-left center">
+								<h3>
+					<h3> Spinny Cat </h3>
+					<h3> </h3>
+					<h3> </h3>
+					</div>
+		      <div class="col-md-6 pull-right">
+						<img src="assets/colorful.png" class="img-responsive colorful">
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<div class="bright">
+		  <div class="row">
+		  <div class="col-sm-4 col-sm-offset-2">
+		 	</div>
+		  </div>
+		</div>
+
+		<footer>
+			<div class="foot">
+		    <div class="row">
+		      <div class="col-md-12 text-center">
+		        <div class="iconlist" id="Contact">
+						<ul class="list-inline">
+							<li><a href="http://www.facebook.com/taurindb"><i class="fa fa-facebook fa-5x"></i></a></li>
+							<li><a href="http://www.twitter.com/myspacebooktube"><i class="fa fa-twitter fa-5x"></i></a></li>
+							<li><a href="http://www.instagram.com/myspacebooktube"><i class="fa fa-instagram fa-5x"></i></a></li>
+							<li><a href="http://www.github.com/taurindb"><i class="fa fa-github fa-5x"></i></a></li>
+		        </ul>
+					</div>
+		       <p> &copy;2014 - Taurin Barrera (CC BY-NC)</p>
+		      </div>
+		    </div>
+		  </div>
+		</footer>
+
+			<!-- script references -->
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="js/trianglify.js"></script>
+		<script src="http://d3js.org/colorbrewer.v1.min.js"></script>
+
+<!-- 	Trianglify Script-->
+
+<script>
+			var t = new Trianglify({
+			x_gradient: colorbrewer.YlGnBu[9],
+			y_gradient: colorbrewer.RdPu[9],
+			cellpadding: 30,
+			noiseIntensity: 0,
+			cellsize: 200});
+
+			  function height() {
+            return Math.max(
+                document.body.scrollHeight, document.documentElement.scrollHeight,
+                document.body.offsetHeight, document.documentElement.offsetHeight,
+                document.body.clientHeight, document.documentElement.clientHeight
+            );
+        }
+
+			 function heightChange() {
+            if (height() != prevheight) {
+                prevheight = height();
+                redraw();
+            };
+        }
+
+				 window.onresize = function() {
+            redraw();
+        };
+
+        function redraw() {
+            var pattern = t.generate(document.body.clientWidth, height());
+            document.body.setAttribute('style', 'background-image: '+pattern.dataUrl);
+        };
+
+				redraw();
+			</script>
+
+			<!-- // <script src="js/scripts.js"></script> -->
+		 	<!-- Include all compiled plugins (below), or include individual files as needed -->
+		  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+			<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+	 </body>
+</html>
