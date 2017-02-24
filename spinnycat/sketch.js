@@ -34,8 +34,8 @@ b.index = a.out;
 b.cmRatio = mouseX / windowWidth;
 b.fx.add(
   Delay({
-    time:     mouseX / windowWidth;
-    feedback: mouseY / windowHeight;
+    time:     mouseX / windowWidth
+    feedback: mouseY / windowHeight
   })
 )
 
