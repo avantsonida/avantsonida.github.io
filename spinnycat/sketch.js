@@ -24,9 +24,6 @@ function draw() {
     tint(200, 153, x, 126);
   }
   drawSprites();
-)
-
-
 }
 
 function windowResized() {
