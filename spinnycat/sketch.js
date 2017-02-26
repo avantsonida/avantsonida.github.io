@@ -9,8 +9,6 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   kitty = createSprite(width/3, height/3);
   kitty.addImage(kittyImg);
-
-  drums = EDrums('x*o*x*o-')
 }
 
 function draw() {
